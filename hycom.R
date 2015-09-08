@@ -28,7 +28,8 @@ readhycom <- function(date, xlim = NULL, ylim = NULL, zlim = NULL) {
   xx <- lon[xind[1]:xind[2]]
   yy <- lat[yind[1]:yind[2]]
   zz <- depth[zind[1]:zind[2]]
-  setZ(brick(a, xmn = min(xx), xmx = max(xx), ymn = min(yy), ymx = max(yy), transpose = TRUE, crs = "+proj=longlat +ellps=WGS84 +over"), zz)
+  rotate(flip(setZ(brick(a, xmn = min(xx), xmx = max(xx), ymn = min(yy), ymx = max(yy), transpose = TRUE, crs = "+proj=longlat +ellps=WGS84 +over"), zz), "y"))
+  
  }
  
 x <-  readhycom("2015-01-01", xlim = c(-85, -30), ylim = c(-80, -45), zlim = c(0, 4))
