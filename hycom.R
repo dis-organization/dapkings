@@ -34,5 +34,9 @@ readhycom <- function(date, xlim = NULL, ylim = NULL, zlim = NULL) {
  
 x <-  readhycom("2015-01-01", xlim = c(-85, -30), ylim = c(-80, -45), zlim = c(0, 4))
  
+## draw a line north
+xx <- extract(x, cbind(-70, yFromRow(x)))
+image(rev(yFromRow(x)), -40:-1, xx[nrow(xx):1, ncol(xx):1])
+
 
 
