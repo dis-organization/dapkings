@@ -32,11 +32,19 @@ readhycom <- function(date, xlim = NULL, ylim = NULL, zlim = NULL) {
   
  }
  
+transect <- -58
 x <-  readhycom("2015-01-01", xlim = c(-85, -30), ylim = c(-80, -45), zlim = c(0, 4))
- 
-## draw a line north
-xx <- extract(x, cbind(-70, yFromRow(x)))
-image(rev(yFromRow(x)), -40:-1, xx[nrow(xx):1, ncol(xx):1])
+xx <- extract(x, cbind(transect, yFromRow(x)))
+pal <- palr::sstPal(palette = TRUE)
+
+par(mfrow = c(2, 1))
+plot(x[[1]], asp = NA, col = pal$cols, breaks = pal$breaks, legend = FALSE)
+latlim <- c(-60, -48)
+abline(h = latlim)
+lines(cbind(transect, yFromRow(x)))
+image(rev(yFromRow(x)), -40:-1, xx[nrow(xx):1, ncol(xx):1], xlim = latlim, col = pal$cols[-1],  breaks = pal$breaks)
+contour(rev(yFromRow(x)), -40:-1, xx[nrow(xx):1, ncol(xx):1], add = TRUE)    
+
 
 
 
