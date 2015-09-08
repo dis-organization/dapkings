@@ -48,7 +48,9 @@ image(rev(yFromRow(x)), depth, xx[nrow(xx):1,], xlim = latlim, col = pal$cols[-1
 contour(rev(yFromRow(x)), depth, xx[nrow(xx):1, ], add = TRUE)    
 ```
 
+![alt text](temprof.png)
 
+![alt text](otad.png)
 
 
 
