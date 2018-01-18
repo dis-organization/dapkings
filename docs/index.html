@@ -55,10 +55,13 @@
     
 <div class="contents">
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <div id="dapkings" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#dapkings" class="anchor"></a>dapkings</h1></div>
-<p>The goal of dapkings is to …</p>
+<p>The goal of dapkings is to provide access to OpenDAP servers.</p>
+<p>I’m toying with what a dap interface might be like, faking the lib with RNetCDF. Ultimately we need “labelled array” abstraction in R, our xarray. Maybe stars, but I (personally) believe there’s not enough engagement in our communities with what this should be. No one has done it properly and it’s too big for one person to define. If we had libdap it should be raw like ncdf4 (more raw though) so more experimentation can be carried out.</p>
+<p>Here I’ll borrow from things I’ve learned from hypertidy/silicate, hypertidy/ncmeta and hypertidy/tidync, the raster package, and maybe hypertidy/gridcol.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -71,19 +74,7 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## basic example code</code></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(cars)
-<span class="co">#&gt;      speed           dist       </span>
-<span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span>
-<span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span>
-<span class="co">#&gt;  Median :15.0   Median : 36.00  </span>
-<span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span>
-<span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span>
-<span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub!</p>
+<p>Please note that this project is released with a <a href="CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 </div>
 </div>
 </div>
@@ -96,6 +87,12 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Michael Sumner <br><small class="roles"> Author, maintainer </small> </li>
+</ul>
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://travis-ci.org/mdsumner/dapkings"><img src="https://travis-ci.org/mdsumner/dapkings.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://ci.appveyor.com/api/projects/status/github//mdsumner/dapkings/?branch=master&amp;svg=true"><img src="https://ci.appveyor.com/mdsumner/dapkings" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://codecov.io/github/mdsumner/dapkings?branch=master"><img src="https://codecov.io/gh/mdsumner/dapkings/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
 </ul>
 </div>
 

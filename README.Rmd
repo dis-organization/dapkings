@@ -19,6 +19,10 @@ knitr::opts_chunk$set(
 
 The goal of dapkings is to provide access to OpenDAP servers. 
 
+I'm toying with what a dap interface might be like, faking the lib with RNetCDF. Ultimately we need "labelled array" abstraction in R, our xarray.  Maybe stars, but I (personally)  believe there's not enough engagement in our communities with what this should be. No one has done it properly and it's too big for one person to define. If we had libdap it should be raw like ncdf4 (more raw though) so more experimentation can be carried out. 
+
+Here I'll borrow from things I've learned from hypertidy/silicate, hypertidy/ncmeta and hypertidy/tidync, the raster package, and maybe hypertidy/gridcol. 
+
 ## Installation
 
 You can install dapkings from GitHub with:
