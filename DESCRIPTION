@@ -1,9 +1,16 @@
 Package: dapkings
 Version: 0.0.0.9000
-Title: What the Package Does (one line, title case)
-Description: What the package does (one paragraph).
+Title: Straigtfoward 'OpenDAP' Interaction Using Whatever 
+Description: Interrogate, interact, and read data from 'OpenDAP' sources. Might be renamed to 'rdap', but
+  this repository was originally created around the time that Sharon Jones passed away, so the name is a bit sentimental. 
+  It's expected that this is easy enough to install in Linux, and automatically available via
+   CRAN Windows binary 'ncdf4' in 64-bit R (but not in 32-bit windows R). Mac support is unknown to this author, so far. 
 Authors@R: person("Michael", "Sumner", email = "mdsumner@gmail.com", role = c("aut", "cre"))
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
+Imports: RNetCDF (>= 1.9-1)
+Suggests: 
+    testthat
+RoxygenNote: 6.0.1
