@@ -12,5 +12,6 @@ LazyData: true
 ByteCompile: true
 Imports: RNetCDF (>= 1.9-1)
 Suggests: 
-    testthat
+    testthat,
+    covr
 RoxygenNote: 6.0.1
